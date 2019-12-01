@@ -19,9 +19,9 @@ public class DisplayedDemo {
 
         WebElement usernameInput = driver.findElement(By.id("username"));
         //isDisplayed()---> if the element is in the html code , but not displayed
-        //it will return false, if dispalyed it will return true.
+        //it will return false, if displayed it will return true.
         System.out.println(usernameInput.isEnabled());
-        Assert.assertFalse(usernameInput.isDisplayed(), "Verify that username inputbox is not displayed");
+        Assert.assertFalse(usernameInput.isDisplayed(), "Verify that username input box is not displayed");
 
         WebElement startButton = driver.findElement(By.cssSelector("#start>button"));
         startButton.click();
