@@ -58,6 +58,7 @@ public class SelectClassTest {
         Thread.sleep(3000);
         stateList.selectByVisibleText("Texas");
 
+
         actualOption = stateList.getFirstSelectedOption().getText();
         Assert.assertEquals(actualOption,"Texas");
 
@@ -72,6 +73,8 @@ public class SelectClassTest {
         Thread.sleep(3000);
         stateList.selectByValue("VA");
         System.out.println(stateList.getFirstSelectedOption().getText());
+
+
 
     }
 }
