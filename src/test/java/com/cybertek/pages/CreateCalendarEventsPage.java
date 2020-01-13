@@ -18,6 +18,7 @@ public class CreateCalendarEventsPage extends BasePage {
 
     @FindBy(css = "[id^='recurrence-repeats-view']")
     public WebElement repeatOptions;
+
     @FindBy(className = "select2-chosen")
     public WebElement selectedOwner;
 
@@ -47,11 +48,42 @@ public class CreateCalendarEventsPage extends BasePage {
     @FindBy(xpath = "(//input[@type='radio'])[4]")
     public WebElement after;
 
+   @FindBy(xpath = "//input[@data-related-field='occurrences']")
+    public WebElement afterInputBox;
+
     @FindBy(xpath = "(//input[@type='radio'])[5]")
     public WebElement by;
 
     public Select repeatOptionsList(){
         return new Select(repeatOptions);
     }
+
+    @FindBy(xpath = "//span[@class='caret']")
+    public WebElement saveAndCloseExpandButton;
+
+    @FindBy(xpath = "//div[@class='pull-left btn-group icons-holder']")
+    public WebElement cancelButton;
+
+    @FindBy(css = ".oro-subtitle")
+    public WebElement allCalendarEventsSubtitle;
+
+    @FindBy(name = "oro_calendar_event_form[allDay]")
+    public WebElement allDayEvent;
+
+    @FindBy(xpath = "//input[@checked='checked']")
+    public WebElement repeatEvery;
+
+    @FindBy(xpath = "//span[contains(.,'Daily every 1 day')]")
+    public WebElement summaryMessage;
+
+    @FindBy(xpath = "//input[@class='datepicker-input hasDatepicker']")
+    public WebElement byInputBox;
+
+    @FindBy(xpath = "//input[@value='monday']")
+    public WebElement repeatOnMonday;
+
+    @FindBy(xpath = "//input[@value='friday']")
+    public WebElement repeatOnFriday;
+
 
 }

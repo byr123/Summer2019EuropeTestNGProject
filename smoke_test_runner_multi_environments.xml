@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Vytrack Smoke Suite">
+    <test name="QA1 Smoke test">
+        <parameter name="environment" value="qa1_url"></parameter>
+        <classes>
+            <class name="com.cybertek.tests.day14_pom_tests.PositiveLoginTests"></class>
+        </classes>
+    </test>
+
+
+    <test name="QA2 Smoke test">
+        <parameter name="environment" value="qa2_url"></parameter>
+        <classes>
+            <class name="com.cybertek.tests.day14_pom_tests.PositiveLoginTests"></class>
+        </classes>
+    </test>
+
+
+    <test name="QA3 Smoke test">
+        <parameter name="environment" value="qa3_url"></parameter>
+        <classes>
+            <class name="com.cybertek.tests.day14_pom_tests.PositiveLoginTests"></class>
+        </classes>
+    </test>
+
+</suite>
